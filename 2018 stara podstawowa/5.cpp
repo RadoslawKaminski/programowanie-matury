@@ -12,7 +12,7 @@ string toString(int liczba)
 }
 int main()
 {
-	int liczby[99999];
+	int liczby[1001];
 	ifstream liczbyP;
 	liczbyP.open("test.txt");
 	if(liczbyP.is_open())
@@ -55,6 +55,21 @@ int main()
 				}
 			}
 			
+			//5.3
+			cout<<"5.3:\n";
+			int suma[1001]={};
+			cout<<"Liczby, ktorych suma cyfr jest wieksza od 30:\n";
+			for(int k=0; k<i; k++)
+			{
+				int liczba = liczby[k];
+				while(liczba > 0)
+				{
+					suma[k] += liczba%10;
+					liczba /= 10;
+				}
+				if(suma[k] > 30)
+					cout<<liczby[k]<<endl;
+			}
 			wynik5.close();
 		}
 		liczbyP.close();
