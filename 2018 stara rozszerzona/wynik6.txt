@@ -1,0 +1,8 @@
+6.1:
+Na 'A' konczy sie 71 slow.
+
+6.2:
+Wierszy, w ktorych pierwsze slowo zawiera sie w drugim, jest 234
+
+6.3:
+Wierszy, w ktorych pierwsze slowo jest anagramem drugiego, jest 40
