@@ -1,8 +1,15 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <sstream>
 using namespace std;
-//matura rozszerzona 2018 w starej formule
+//matura podstawowa 2018 w starej formule
+string toString(int liczba)
+{
+	ostringstream ss;
+	ss << liczba;
+	return ss.str();
+}
 int main()
 {
 	int liczby[99999];
@@ -29,8 +36,25 @@ int main()
 			for(int k=0; k<i; k++)
 				if(liczby[k] > max && liczby[k]%2 == 0)
 					max = liczby[k];
-			cout<<"Najwieksza liczba parzysta to: "<<max;
-					
+			cout<<"Najwieksza liczba parzysta to: "<<max<<endl;
+			
+			//5.2
+			cout<<"5.2:\n";
+			for(int k=0; k<i; k++)
+			{
+				string liczba = toString(liczby[k]);
+				for(int l=0; l<liczba.length()/2; l++)
+				{
+					if(liczba[l] == liczba[liczba.length()-l-1])
+					{
+						if(l == liczba.length()/2-1)
+							cout<<liczba<<endl;
+					}
+					else
+						break;
+				}
+			}
+			
 			wynik5.close();
 		}
 		liczbyP.close();
