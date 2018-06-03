@@ -7,7 +7,7 @@ int main()
 {
 	int liczby[99999];
 	ifstream liczbyP;
-	liczbyP.open("liczby.txt");
+	liczbyP.open("test.txt");
 	if(liczbyP.is_open())
 	{
 		int i=-1;
