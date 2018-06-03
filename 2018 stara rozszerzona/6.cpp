@@ -10,8 +10,8 @@ int main()
 	slowaP.open("slowa.txt");
 	if(slowaP.is_open())
 	{
-		int i=0;
-		while(slowaP>>slowa[i++]);
+		int i=-1;
+		while(slowaP>>slowa[++i]);
 		
 		ofstream wynik6;
 		wynik6.open("wynik6.txt");
@@ -31,7 +31,7 @@ int main()
 			cout<<"\n6.2:\n";
 			wynik6<<"\n6.2:\n";
 			int zawiera=0;
-			for(int j=0; j<i-1; j+=2)
+			for(int j=0; j<i; j+=2)
 				if(slowa[j+1].find(slowa[j]) != string::npos)
 				{
 					cout<<slowa[j]<<" zawiera sie w "<<slowa[j+1]<<endl;
@@ -44,7 +44,7 @@ int main()
 			cout<<"\n6.3:\n";
 			wynik6<<"\n6.3:\n";
 			int anagram=0;
-			for(int j=0; j<i-1; j+=2)
+			for(int j=0; j<i; j+=2)
 				if(slowa[j].length() == slowa[j+1].length())
 				{
 					for(int k=0; k<slowa[j+1].length(); k++)
@@ -64,6 +64,7 @@ int main()
 			cout<<"Wierszy, w ktorych pierwsze slowo jest anagramem drugiego, jest "<<anagram<<endl;
 			wynik6<<"Wierszy, w ktorych pierwsze slowo jest anagramem drugiego, jest "<<anagram<<endl;
 			
+			wynik6.close();
 		}
 		slowaP.close();
 	}
