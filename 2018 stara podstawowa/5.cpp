@@ -58,6 +58,7 @@ int main()
 			//5.3
 			cout<<"5.3:\n";
 			int suma[1001]={};
+			int sumaS=0;
 			cout<<"Liczby, ktorych suma cyfr jest wieksza od 30:\n";
 			for(int k=0; k<i; k++)
 			{
@@ -69,7 +70,12 @@ int main()
 				}
 				if(suma[k] > 30)
 					cout<<liczby[k]<<endl;
+				sumaS += suma[k];
 			}
+			cout<<"Wszystkie cyfry, ktore zostaly wykorzystane do zapisu wszystkich liczb w pliku to: ";
+			cout<<"1,2,3,4,5,6,7,8 oraz 9, ich suma wynosi 45\n";
+			cout<<"... Chyba, ze chodzi o sume wszystkich cyfr w pliku, wynosi ona "<<sumaS;
+			
 			wynik5.close();
 		}
 		liczbyP.close();
