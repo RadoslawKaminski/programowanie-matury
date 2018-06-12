@@ -21,6 +21,7 @@ int main()
 		{
 			//4.1
 			cout<<"4.1:\n";
+			zadanie4<<"4.1:\n";
 			string dwucykliczne[501]={};
 			int ilosc=0;
 			for(int j=0; j<i; j++)
@@ -37,16 +38,20 @@ int main()
 				}
 			}
 			cout<<"Napisow dwucyklicznych jest "<<ilosc<<endl;
+			zadanie4<<"Napisow dwucyklicznych jest "<<ilosc<<endl;
 			int maxdwi=0;
 			for(int j=0; j<ilosc; j++)
 				if(dwucykliczne[maxdwi].length() < dwucykliczne[j].length())
 					maxdwi = j;
 			cout<<"Najdlozszy dwucykliczny w pliku to: "<<dwucykliczne[maxdwi]<<endl;
 			cout<<"Jego dlugosc to: "<<dwucykliczne[maxdwi].length()<<endl;
+			zadanie4<<"Najdlozszy dwucykliczny w pliku to: "<<dwucykliczne[maxdwi]<<endl;
+			zadanie4<<"Jego dlugosc to: "<<dwucykliczne[maxdwi].length()<<endl;
 			
 			
 			//4.2
 			cout<<"\n4.2:\n";
+			zadanie4<<"\n4.2:\n";
 			string niepoprawne[501]={};
 			int liczban=0;
 			int mindlugoscn=binarne[0].length();
@@ -70,6 +75,30 @@ int main()
 			}
 			cout<<"Liczba niepoprawnych napisow: "<<liczban<<endl;
 			cout<<"Najmniejsza dlugosc niepoprawnego napisu to "<<mindlugoscn<<endl;
+			zadanie4<<"Liczba niepoprawnych napisow: "<<liczban<<endl;
+			zadanie4<<"Najmniejsza dlugosc niepoprawnego napisu to "<<mindlugoscn<<endl;
+			
+			//4.2
+			cout<<"\n4.2:\n";
+			zadanie4<<"\n4.2:\n";
+			string maxbinary;
+			int maxdecimal=0;
+			for(int j=0; j<i; j++)
+			{
+				if(binarne[j].length()<17) //17 cyfr ma liczba 65 535 w zapisie binarnym
+				{
+					if(maxdecimal < bitset<16>(binarne[j]).to_ulong())
+					{
+						maxbinary = binarne[j];
+						maxdecimal = bitset<16>(maxbinary).to_ulong();
+					}
+				}
+			}
+			cout<<"Najwieksza liczba, mniejsza od 65 535 w pliku to "<<maxdecimal<<endl;
+			cout<<"W zapisie binarnym: "<<maxbinary<<endl;
+			zadanie4<<"Najwieksza liczba, mniejsza od 65 535 w pliku to "<<maxdecimal<<endl;
+			zadanie4<<"W zapisie binarnym: "<<maxbinary<<endl;
+			
 			zadanie4.close();
 		}
 		binarneP.close();

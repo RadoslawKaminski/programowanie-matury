@@ -1,0 +1,12 @@
+4.1:
+Napisow dwucyklicznych jest 18
+Najdlozszy dwucykliczny w pliku to: 00100101100011100010010110001110
+Jego dlugosc to: 32
+
+4.2:
+Liczba niepoprawnych napisow: 359
+Najmniejsza dlugosc niepoprawnego napisu to 4
+
+4.2:
+Najwieksza liczba, mniejsza od 65 535 w pliku to 54885
+W zapisie binarnym: 1101011001100101
